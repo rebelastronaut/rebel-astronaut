@@ -5,7 +5,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -16,6 +16,10 @@
     "jsx": "preserve",
     "incremental": true,
     "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "webpack-env" // here
+    ],
     "plugins": [
       {
         "name": "next"

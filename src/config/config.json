@@ -1,47 +1,43 @@
 {
   "site": {
-    "title": "Nextplate",
-    "base_url": "https://nextplate.netlify.app",
+    "title": "Rebel Astronaut",
+    "base_url": "https://rebelastronaut.co.uk",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_darkmode": "/images/logo-darkmode.png",
+    "favicon": "/images/rebel-favicon.png",
+    "logo": "/images/logo-black-white.png",
+    "logo_darkmode": "/images/logo-white-black.png",
     "logo_width": "150",
-    "logo_height": "27",
-    "logo_text": "Nextplate"
+    "logo_height": "60",
+    "logo_text": "Rebel Astronaut"
   },
 
   "settings": {
-    "search": true,
+    "search": false,
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 2,
+    "pagination": 21,
     "summary_length": 200,
-    "blog_folder": "blog"
+    "blog_folder": "blog",
+    "astronaut_folder": "astronaut-of-the-day",
+    "event_folder": "events"
   },
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Designed And Developed by [Zeon Studio](https://zeon.studio)"
+    "copyright": "Designed And Developed by rebelastronaut"
   },
 
   "navigation_button": {
-    "enable": true,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/nextplate"
-  },
-
-  "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
-    "settings": {}
+    "enable": false,
+    "label": "Join The Community",
+    "link": ""
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Giles Hinchcliff",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_description": "Rebel Astronaut"
   }
 }

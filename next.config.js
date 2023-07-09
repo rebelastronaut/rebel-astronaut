@@ -7,4 +7,9 @@ const nextConfig = {
   trailingSlash: config.site.trailing_slash,
 };
 
-module.exports = nextConfig;
+module.exports = {  
+experimental: {
+  swcPlugins: [["next-superjson-plugin", {}]],
+},
+nextConfig
+}

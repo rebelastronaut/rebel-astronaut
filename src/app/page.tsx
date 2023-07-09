@@ -1,31 +1,41 @@
-import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction";
+// import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
-import Testimonials from "@/partials/Testimonials";
+// import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
 import { FaCheck } from "react-icons/fa/index.js";
-
+import RandomImage from "@/lib/utils/randomImage";
 const Home = () => {
   const homepage = getListPage("_index.md");
-  const testimonial = getListPage("sections/testimonial.md");
-  const callToAction = getListPage("sections/call-to-action.md");
+  // const testimonial = getListPage("sections/testimonial.md");
+  // const callToAction = getListPage("sections/call-to-action.md");
   const { frontmatter } = homepage;
   const {
     banner,
     features,
   }: {
-    banner: { title: string; image: string; content?: string; button?: Button };
+    banner: { title: string; image: string; content?: string; button?: Button; randomImage?: RandomImage};
     features: Feature[];
   } = frontmatter;
+
+  const cache = {}
+
+  function importAll(r) {
+      r.keys().forEach((key) => (cache[key] = r(key)));
+  }
+  importAll(require.context('../../public/astronaut-of-the-day/images', false, /\.(png|jpe?g|svg)$/));
+  // @ts-ignore: Unreachable code error
+  const images = Object.entries(cache).map(cache => cache[1].default);
+  
+
 
   return (
     <>
       <SeoMeta />
       <section className="section pt-14">
         <div className="container">
-          <div className="row justify-center">
+        <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
               <h1
                 className="mb-4"
@@ -41,18 +51,19 @@ const Home = () => {
                 </a>
               )}
             </div>
-            {banner.image && (
-              <div className="col-12">
-                <ImageFallback
-                  src={banner.image}
-                  className="mx-auto"
-                  width="800"
-                  height="420"
-                  alt="banner image"
-                  priority
-                />
+            <div className="container">
+              <div className="row items-center justify-between">                 
+                <div className="col">
+                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                </div>
+                <div className="col">
+                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                </div>
+                <div className="col hidden md:block">
+                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </section>
@@ -69,12 +80,7 @@ const Home = () => {
                   index % 2 !== 0 && "md:order-2"
                 }`}
               >
-                <ImageFallback
-                  src={feature.image}
-                  height={480}
-                  width={520}
-                  alt={feature.title}
-                />
+                <RandomImage imageList={images} width={600} height={600} data-superjson/>
               </div>
               <div
                 className={`md:col-7 lg:col-6 ${
@@ -111,8 +117,8 @@ const Home = () => {
         </section>
       ))}
 
-      <Testimonials data={testimonial} />
-      <CallToAction data={callToAction} />
+      {/* <Testimonials data={testimonial} />
+      <CallToAction data={callToAction} /> */}
     </>
   );
 };
