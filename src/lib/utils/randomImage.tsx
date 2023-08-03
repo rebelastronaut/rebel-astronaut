@@ -6,6 +6,7 @@ interface MyProps {
     imageList
     width
     height
+    priority
   }
 
   interface MyState {
@@ -14,11 +15,7 @@ interface MyProps {
 
 class RandomImage extends React.Component<MyProps, MyState> {
     changeImage = () => {
-        console.log(this.props.imageList)
         const randomNumber = Math.floor(Math.random() * this.props.imageList.length);
-        const randomKey = this.props.imageList[randomNumber]
-        console.log(randomKey)
-        console.log(this.props.imageList.randomKey)
         return randomNumber
     }
     render() {
@@ -28,6 +25,7 @@ class RandomImage extends React.Component<MyProps, MyState> {
             blurDataURL={this.props.imageList[this.changeImage()].blurDataURL}
             width={this.props.width}
             height={this.props.height}
+            priority={this.props.priority}
             placeholder="blur"
         />
         )

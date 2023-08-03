@@ -35,13 +35,13 @@ const About = () => {
           <div className="row justify-center">
           <div className="col"/>
             <div className="col hidden sm:block">
-              <RandomImage imageList={images} width={300} height={300} data-superjson/>
+              <RandomImage imageList={images} width={300} height={300} priority={"False"} data-superjson/>
             </div>
             <div className="col">
-              <RandomImage imageList={images} width={300} height={300} data-superjson/>
+              <RandomImage imageList={images} width={300} height={300} priority={"False"} data-superjson/>
             </div>
             <div className="col hidden md:block">
-              <RandomImage imageList={images} width={300} height={300} data-superjson/>
+              <RandomImage imageList={images} width={300} height={300} priority={"False"} data-superjson/>
             </div>
             <div className="col"/>
           </div>

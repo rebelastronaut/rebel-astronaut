@@ -10,11 +10,16 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
+// import {
+//   FaRegClock,
+//   FaRegFolder,
+//   FaRegUserCircle,
+// } from "react-icons/fa";
+import { FaRegClock } from "@react-icons/all-files/fa/FaRegClock";
+import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
+import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
+
+
 
 const { astronaut_folder } = config.settings;
 

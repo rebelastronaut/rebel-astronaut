@@ -1,23 +1,15 @@
 {
   "main": [
     {
-      "name": "facebook",
-      "icon": "FaFacebook",
-      "link": "https://www.facebook.com/"
-    },
-    {
-      "name": "twitter",
-      "icon": "FaTwitter",
-      "link": "https://twitter.com/"
-    },
-    {
       "name": "github",
       "icon": "FaGithub",
+      "family": "fa",
       "link": "https://www.github.com/"
     },
     {
       "name": "linkedin",
       "icon": "FaLinkedin",
+      "family": "fa",
       "link": "https://www.linkedin.com/"
     }
   ]

@@ -4,7 +4,8 @@ import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 // import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
-import { FaCheck } from "react-icons/fa/index.js";
+import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
+
 import RandomImage from "@/lib/utils/randomImage";
 const Home = () => {
   const homepage = getListPage("_index.md");
@@ -54,13 +55,13 @@ const Home = () => {
             <div className="container">
               <div className="row items-center justify-between">                 
                 <div className="col">
-                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
                 </div>
                 <div className="col">
-                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
                 </div>
                 <div className="col hidden md:block">
-                  <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
                 </div>
               </div>
             </div>
@@ -80,7 +81,7 @@ const Home = () => {
                   index % 2 !== 0 && "md:order-2"
                 }`}
               >
-                <RandomImage imageList={images} width={600} height={600} data-superjson/>
+                <RandomImage imageList={images} width={600} height={600} priority={"False"} data-superjson/>
               </div>
               <div
                 className={`md:col-7 lg:col-6 ${

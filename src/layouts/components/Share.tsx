@@ -1,10 +1,9 @@
 import config from "@/config/config.json";
-import {
-  IoLogoFacebook,
-  IoLogoLinkedin,
-  IoLogoPinterest,
-  IoLogoTwitter,
-} from "react-icons/io5/index.js";
+import { IoLogoFacebook } from "@react-icons/all-files/io5/IoLogoFacebook";
+import { IoLogoLinkedin } from "@react-icons/all-files/io5/IoLogoLinkedin";
+import { IoLogoPinterest } from "@react-icons/all-files/io5/IoLogoPinterest";
+import { IoLogoTwitter}  from "@react-icons/all-files/io5/IoLogoTwitter";
+
 
 const Share = ({
   title,
