@@ -7,9 +7,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer({  
-experimental: {
-  swcPlugins: [["next-superjson-plugin", {}]],
-},
+// experimental: {
+//   swcPlugins: [["next-superjson-plugin", {}]],
+// },
   output: 'export',
   images: { unoptimized: true },
   reactStrictMode: true,
