@@ -10,6 +10,8 @@ module.exports = withBundleAnalyzer({
 experimental: {
   swcPlugins: [["next-superjson-plugin", {}]],
 },
+  output: 'export',
+  images: { unoptimized: true },
   reactStrictMode: true,
   basePath: config.base_path !== "/" ? config.base_path : "",
   trailingSlash: config.site.trailing_slash,

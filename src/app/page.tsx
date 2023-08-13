@@ -1,3 +1,4 @@
+// "use client"
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 // import CallToAction from "@/partials/CallToAction";

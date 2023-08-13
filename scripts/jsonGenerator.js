@@ -3,7 +3,7 @@ const path = require("path");
 const matter = require("gray-matter");
 const config = require("../src/config/config.json");
 
-const { blog_folder } = config.settings;
+const { astronaut_folder } = config.settings;
 const jsonDir = "./.json";
 
 // get data from markdown
@@ -30,7 +30,7 @@ const getData = (folder) => {
 };
 
 // get post data
-const posts = getData(`src/content/${blog_folder}`);
+const posts = getData(`src/content/${astronaut_folder}`);
 
 try {
   // creare folder if it doesn't exist

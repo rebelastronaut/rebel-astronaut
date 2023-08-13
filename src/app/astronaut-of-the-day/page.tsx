@@ -1,3 +1,4 @@
+// "use client"
 import AstronautCard from "@/components/AstronautCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
