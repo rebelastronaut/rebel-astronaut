@@ -64,13 +64,17 @@ jobs:
           mv ~/image-* public/astronaut-of-the-day/images/
           mv ~/meme-* public/astronaut-of-the-day/memes/
           mv *.md src/content/astronaut-of-the-day/
-
-
+    - uses: webfactory/ssh-agent@v0.7.0
+      with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY_REBEL }}
+    - run: |
+        git checkout -B memes
+        git status
       # - name: Run the Action
       #   if: startsWith(github.ref, 'refs/heads/feature')
       #   uses: devops-infra/action-pull-request@v0.5.5
       #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     github_token: ${{ secrets. }}
       #     title: ${{ github.event.commits[0].message }}
       #     assignee: ${{ github.actor }}
       #     label: automatic,feature
