@@ -66,6 +66,7 @@ jobs:
           mv ~/meme-* public/astronaut-of-the-day/memes/
           mv ~/*.md src/content/astronaut-of-the-day/
       - run: |
+          cd rebel-astronaut
           git config --global user.email "astronaut_bot@astronaut.com"
           git config --global user.name "Astro Bot"
           git checkout -B memes
