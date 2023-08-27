@@ -61,7 +61,11 @@ jobs:
           fetch-depth: 0
       - name: move files
         run: |
-          ls -la ~/
+          mv ~/image-* public/astronaut-of-the-day/images/
+          mv ~/meme-* public/astronaut-of-the-day/memes/
+          mv *.md src/content/astronaut-of-the-day/
+
+
       # - name: Run the Action
       #   if: startsWith(github.ref, 'refs/heads/feature')
       #   uses: devops-infra/action-pull-request@v0.5.5
