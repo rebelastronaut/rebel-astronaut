@@ -71,7 +71,8 @@ jobs:
           git checkout -B memes
           git add .
           git commit -m "Added new meme for astronaut of the day"
-          git push
+          git push --set-upstream origin memes
+          
       # - name: Run the Action
       #   if: startsWith(github.ref, 'refs/heads/feature')
       #   uses: devops-infra/action-pull-request@v0.5.5
