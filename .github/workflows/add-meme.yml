@@ -60,11 +60,12 @@ jobs:
           git clone git@github.com:rebelastronaut/rebel-astronaut.git
       - name: move files
         run: |
+          ls -la
+          ls -la rebel-astronaut
           mv ~/image-* rebel-astronaut/public/astronaut-of-the-day/images/
           mv ~/meme-* rebel-astronaut/public/astronaut-of-the-day/memes/
           mv ~/*.md rebel-astronaut/src/content/astronaut-of-the-day/
       - run: |
-          cat .git/config
           git config --global user.email "astronaut_bot@astronaut.com"
           git config --global user.name "Astro Bot"
           git checkout -B memes
