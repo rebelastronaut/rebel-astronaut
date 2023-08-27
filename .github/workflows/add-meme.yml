@@ -69,7 +69,7 @@ jobs:
           cd rebel-astronaut
           git config --global user.email "astronaut_bot@astronaut.com"
           git config --global user.name "Astro Bot"
-          git checkout -B memes
+          git checkout memes
           git add .
           git commit -m "Added new meme for astronaut of the day"
           git push --set-upstream origin memes
