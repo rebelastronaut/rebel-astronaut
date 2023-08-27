@@ -5,7 +5,7 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import PostSidebar from "@/partials/PostSidebar";
+// import PostSidebar from "@/partials/PostSidebar";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 
@@ -45,9 +45,9 @@ const Posts = ({ params }: { params: { page: number } }) => {
   const postIndex: Post = getListPage(`${blog_folder}/_index.md`);
   const { title, meta_title, description, image } = postIndex.frontmatter;
   const posts: Post[] = getSinglePage(blog_folder);
-  const allCategories = getAllTaxonomy(blog_folder, "categories");
-  const categories = getTaxonomy(blog_folder, "categories");
-  const tags = getTaxonomy(blog_folder, "tags");
+  // const allCategories = getAllTaxonomy(blog_folder, "categories");
+  // const categories = getTaxonomy(blog_folder, "categories");
+  // const tags = getTaxonomy(blog_folder, "tags");
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPage =
@@ -83,11 +83,11 @@ const Posts = ({ params }: { params: { page: number } }) => {
               />
             </div>
 
-            <PostSidebar
+            {/* <PostSidebar
               categories={categories}
               tags={tags}
               allCategories={allCategories}
-            />
+            /> */}
           </div>
         </div>
       </section>

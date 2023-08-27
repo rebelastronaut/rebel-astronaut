@@ -27,6 +27,12 @@ export type Post = {
   content?: string;
 };
 
+export type RandomImage = {
+  height: int;
+  width: int;
+  imageList: any[]
+}
+
 export type Author = {
   frontmatter: {
     title: string;

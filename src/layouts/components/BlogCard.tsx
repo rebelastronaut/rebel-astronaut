@@ -3,7 +3,8 @@ import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 import Link from "next/link";
-import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
+import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
+import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 import ImageFallback from "../helpers/ImageFallback";
 
 const BlogCard = ({ data }: { data: Post }) => {
