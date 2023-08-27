@@ -67,6 +67,7 @@ jobs:
             ssh-private-key: ${{ secrets.DEPLOY_KEY_REBEL }}
       - run: |
           git checkout -B memes
+          git add .
           git status
       # - name: Run the Action
       #   if: startsWith(github.ref, 'refs/heads/feature')
