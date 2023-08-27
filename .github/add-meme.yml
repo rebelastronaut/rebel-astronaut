@@ -27,6 +27,7 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_KEY_MEME_GENERATOR }}
     - run: |
         git clone git@github.com:rebelastronaut/meme-generator.git
+        echo "cloning"
         cd meme-generator
         git checkout testing
         ls -la
