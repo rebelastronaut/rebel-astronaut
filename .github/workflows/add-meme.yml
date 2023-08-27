@@ -1,0 +1,87 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: add-meme
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - uses: webfactory/ssh-agent@v0.7.0
+      with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY_MEME_GENERATOR }}
+    - run: |
+        git clone git@github.com:rebelastronaut/meme-generator.git
+        echo "cloning"
+        cd meme-generator
+        git checkout testing
+        ls -la
+    - name: Install dependencies
+      run: |
+        cd meme-generator
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: make a meme
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        cd meme-generator
+        ./meme-generator --output WEBP --openai-api-key ${OPENAI_API_KEY}
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v2
+      with:
+        name: memes
+        path: ./meme-generator/memes/
+
+  action-pull-request:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: memes
+          path: ~/
+      - uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY_REBEL }}
+      - run: |
+          git clone git@github.com:rebelastronaut/rebel-astronaut.git
+      - name: move files
+        run: |
+          cd rebel-astronaut && git checkout first_draft
+          ls -la public
+          mv ~/image-* public/astronaut-of-the-day/images/
+          mv ~/meme-* public/astronaut-of-the-day/memes/
+          mv ~/*.md src/content/astronaut-of-the-day/
+      - run: |
+          cd rebel-astronaut
+          git config --global user.email "astronaut_bot@astronaut.com"
+          git config --global user.name "Astro Bot"
+          git checkout memes
+          git add .
+          git commit -m "Added new meme for astronaut of the day"
+          git push --set-upstream origin memes
+      # - name: Run the Action
+      #   if: startsWith(github.ref, 'refs/heads/feature')
+      #   uses: devops-infra/action-pull-request@v0.5.5
+      #   with:
+      #     github_token: ${{ secrets. }}
+      #     title: ${{ github.event.commits[0].message }}
+      #     assignee: ${{ github.actor }}
+      #     label: automatic,feature
+      #     template: .github/PULL_REQUEST_TEMPLATE/FEATURE.md
+      #     old_string: "**Write you description here**"
+      #     new_string: ${{ github.event.commits[0].message }}
+      #     get_diff: true

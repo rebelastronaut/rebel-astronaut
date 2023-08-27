@@ -1,5 +1,4 @@
 import BlogCard from "@/components/BlogCard";
-import Disqus from "@/components/Disqus";
 import Share from "@/components/Share";
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
@@ -11,11 +10,9 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
+import { FaRegClock } from "@react-icons/all-files/fa/FaRegClock";
+import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
+import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 
 const { blog_folder } = config.settings;
 
@@ -132,7 +129,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                   />
                 </div>
               </div>
-              <Disqus className="mt-20" />
             </article>
           </div>
 

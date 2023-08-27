@@ -5,11 +5,9 @@ import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  FaRegFolder,
-  FaRegUserCircle,
-  FaSearch,
-} from "react-icons/fa/index.js";
+import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
+import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
+import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 import ImageFallback from "./helpers/ImageFallback";
 
 const { summary_length, blog_folder } = config.settings;
