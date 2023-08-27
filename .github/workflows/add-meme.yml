@@ -61,7 +61,7 @@ jobs:
         run: |
           mv ~/image-* public/astronaut-of-the-day/images/
           mv ~/meme-* public/astronaut-of-the-day/memes/
-          mv *.md src/content/astronaut-of-the-day/
+          mv *-2023.md src/content/astronaut-of-the-day/
       - uses: webfactory/ssh-agent@v0.7.0
         with:
             ssh-private-key: ${{ secrets.DEPLOY_KEY_REBEL }}
