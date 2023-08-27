@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: memes
-        path: ./memes/
+        path: ./meme-generator/memes/
