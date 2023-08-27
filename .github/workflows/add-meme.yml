@@ -70,6 +70,7 @@ jobs:
           git config --global user.email "astronaut_bot@astronaut.com"
           git config --global user.name "Astro Bot"
           git checkout -B memes
+          git pull
           git add .
           git commit -m "Added new meme for astronaut of the day"
           git push --set-upstream origin memes
