@@ -13,19 +13,12 @@
       "url": "/events"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Astronaut of the Day",
-          "url": "/astronaut-of-the-day"
-        }
-      ]
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Astronaut of the Day",
+      "url": "astronaut-of-the-day"
     }
   ],
   "footer": [
