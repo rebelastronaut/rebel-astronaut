@@ -48,6 +48,7 @@ jobs:
 
 
   action-pull-request:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
