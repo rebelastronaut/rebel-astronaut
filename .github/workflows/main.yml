@@ -26,7 +26,7 @@ jobs:
     - uses: webfactory/ssh-agent@v0.7.0
       with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY_MEME_GENERATOR }}
-      run: |
+    - run: |
         git clone git@github.com:rebelastronaut/meme-generator.git
         git checkout testing
         ls -la
