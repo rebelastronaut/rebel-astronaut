@@ -60,8 +60,7 @@ jobs:
           git clone git@github.com:rebelastronaut/rebel-astronaut.git
       - name: move files
         run: |
-          ls -la
-          ls -la rebel-astronaut
+          cd rebel-astronaut && git checkout first_draft
           mv ~/image-* rebel-astronaut/public/astronaut-of-the-day/images/
           mv ~/meme-* rebel-astronaut/public/astronaut-of-the-day/memes/
           mv ~/*.md rebel-astronaut/src/content/astronaut-of-the-day/
