@@ -26,7 +26,7 @@ const Home = () => {
   function importAll(r) {
       r.keys().forEach((key) => (cache[key] = r(key)));
   }
-  importAll(require.context('../../public/astronaut-of-the-day/images', false, /\.(png|jpe?g|svg)$/));
+  importAll(require.context('../../public/astronaut-of-the-day/images', false, /\.(png|jpe?g|svg|WEBP)$/));
   // @ts-ignore: Unreachable code error
   const images = Object.entries(cache).map(cache => cache[1].default);
   

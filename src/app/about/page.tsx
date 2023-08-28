@@ -18,7 +18,7 @@ const About = () => {
   function importAll(r) {
       r.keys().forEach((key) => (cache[key] = r(key)));
   }
-  importAll(require.context('../../../public/astronaut-of-the-day/images', false, /\.(png|jpe?g|svg)$/));
+  importAll(require.context('../../../public/astronaut-of-the-day/images', false, /\.(png|jpe?g|svg|WEBP)$/));
 // @ts-ignore: Unreachable code error
   const images = Object.entries(cache).map(imageList => imageList[1].default); 
 
