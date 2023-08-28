@@ -23,10 +23,8 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_KEY_MEME_GENERATOR }}
     - run: |
         git clone git@github.com:rebelastronaut/meme-generator.git
-        echo "cloning"
         cd meme-generator
         git checkout testing
-        ls -la
     - name: Install dependencies
       run: |
         cd meme-generator
@@ -60,7 +58,7 @@ jobs:
           git clone git@github.com:rebelastronaut/rebel-astronaut.git
       - name: move files
         run: |
-          cd rebel-astronaut && git checkout first_draft
+          cd rebel-astronaut
           ls -la public
           mv ~/image-* public/astronaut-of-the-day/images/
           mv ~/meme-* public/astronaut-of-the-day/memes/
