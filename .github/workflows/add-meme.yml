@@ -58,7 +58,11 @@ jobs:
           git clone git@github.com:rebelastronaut/rebel-astronaut.git
       - name: move files
         run: |
+<<<<<<< Updated upstream
           cd rebel-astronaut
+=======
+          cd rebel-astronaut 
+>>>>>>> Stashed changes
           ls -la public
           mv ~/image-* public/astronaut-of-the-day/images/
           mv ~/meme-* public/astronaut-of-the-day/memes/
