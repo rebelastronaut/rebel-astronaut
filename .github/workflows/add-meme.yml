@@ -5,7 +5,7 @@ name: add-meme
 
 on:
   schedule:
-  - cron: '?? 17 * * *'
+  - cron: '0 17 * * *'
 
 permissions:
   contents: read
