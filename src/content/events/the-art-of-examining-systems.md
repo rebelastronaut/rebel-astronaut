@@ -3,7 +3,7 @@ title: "Cause, Effect & The Art of Examining Systems"
 meta_title: "Cause, Effect & The Art of Examining Systems"
 description: "LaunchPad Number 2"
 date: 2023-07-08
-image: "/astronaut-of-the-day/memes/2023-07-02T09_49_21.617515.png"
+image: "/events/cause-effect-systems.webp"
 author: "Giles Hinchcliff"
 categories: ["astronaut", "inspiration"]
 tags: ["inspiration", "Astronaut"]
