@@ -3,7 +3,7 @@ title: "The Technical Tidal Wave - Riding the Waves for Digital Excellence"
 meta_title: "The Technical Tidal Wave - Riding the Waves for Digital Excellence"
 description: "LaunchPad Number 1 "
 date: 2023-06-06
-image: "/astronaut-of-the-day/memes/2023-07-02T09_49_21.617515.png"
+image: "/events/technical-tidal-wave.webp"
 categories: ["astronaut", "inspiration"]
 tags: ["inspiration", "Astronaut"]
 author: "Giles Hinchcliff"

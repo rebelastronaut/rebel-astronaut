@@ -1,20 +1,14 @@
 ---
-title: Lord
-email: samwilson@email.com
-image: "/images/avatar.png"
-description: this is meta description
+title: Giles Hinchcliff
+email: giles@rebelastronaut.co.uk
+image: "/images/giles-hinchcliff.jpeg"
+description: CEO Rebel Astronaut.
 social:
 - name: github
   icon: FaGithub
-  link: https://github.com
-
-- name: twitter
-  icon: FaTwitter
-  link: https://twitter.com
+  link: https://github.com/gileshinchcliff
 
 - name: linkedin
   icon: FaLinkedin
-  link: https://linkedin.com
+  link: https://linkedin.com/in/gileshinchcliff
 ---
-
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
