@@ -14,7 +14,7 @@ banner:
 features:
   - title: "Join Our Next Event!"
     # image: "/images/service-1.png"
-    randomImage: "/astronaut-of-the-day/images/"
+    event: true
     content: "Join Our Events and Learn"
     bulletpoints:
       - "Learn from the experts"

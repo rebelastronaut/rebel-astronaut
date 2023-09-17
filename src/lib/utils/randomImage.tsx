@@ -4,9 +4,10 @@ import ImageFallback from "../../layouts/helpers/ImageFallback";
 
 interface MyProps {
     imageList
+    priority
+    alt
     width
     height
-    priority
   }
 
   interface MyState {
@@ -23,10 +24,11 @@ class RandomImage extends React.Component<MyProps, MyState> {
         <ImageFallback
             src={this.props.imageList[this.changeImage()].src}
             blurDataURL={this.props.imageList[this.changeImage()].blurDataURL}
-            width={this.props.width}
-            height={this.props.height}
             priority={this.props.priority}
             placeholder="blur"
+            alt={this.props.alt}
+            width={500}
+            height={300}
         />
         )
     }

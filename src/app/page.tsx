@@ -1,14 +1,31 @@
 // "use client"
-import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 // import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 // import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
 import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
+import EventCard from "@/components/EventCard";
+import config from "@/config/config.json";
+import { Post } from "@/types";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { getListPage, getSinglePage } from "@/lib/contentParser";
 
 import RandomImage from "@/lib/utils/randomImage";
+
+
+
 const Home = () => {
+  const { event_folder, pagination } = config.settings;
+  const postIndex: Post = getListPage(`${event_folder}/_index.md`);
+  const { title, meta_title, description, image } = postIndex.frontmatter;
+  const posts: Post[] = getSinglePage(event_folder);
+  // const allCategories = getAllTaxonomy(astronaut_folder, "categories");
+  // const categories = getTaxonomy(astronaut_folder, "categories");
+  // const tags = getTaxonomy(astronaut_folder, "tags");
+  const sortedPosts = sortByDate(posts);
+  const totalPages = Math.ceil(posts.length / 1);
+  const currentPosts = sortedPosts.slice(0, 1);
   const homepage = getListPage("_index.md");
   // const testimonial = getListPage("sections/testimonial.md");
   // const callToAction = getListPage("sections/call-to-action.md");
@@ -56,13 +73,13 @@ const Home = () => {
             <div className="container">
               <div className="row items-center justify-between">                 
                 <div className="col">
-                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} alt={"Astronaut"} data-superjson/>
                 </div>
                 <div className="col">
-                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} alt={"Astronaut"}  data-superjson/>
                 </div>
                 <div className="col hidden md:block">
-                  <RandomImage imageList={images} width={600} height={600} priority={"True"} data-superjson/>
+                  <RandomImage imageList={images} width={600} height={600} priority={"True"} alt={"Astronaut"} data-superjson/>
                 </div>
               </div>
             </div>
@@ -82,7 +99,11 @@ const Home = () => {
                   index % 2 !== 0 && "md:order-2"
                 }`}
               >
-                <RandomImage imageList={images} width={600} height={600} priority={"False"} data-superjson/>
+              {/* {feature.event == true */}
+                {currentPosts.map((post: any, index: number) => (
+                    <EventCard key="1" data={post} />
+                ))}
+              {/* } */}
               </div>
               <div
                 className={`md:col-7 lg:col-6 ${
