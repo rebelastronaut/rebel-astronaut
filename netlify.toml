@@ -10,6 +10,7 @@ NODE_VERSION = "18"
 __NEXT_PRIVATE_PREBUNDLED_REACT = "next"
 # NEXT_FORCE_EDGE_IMAGES = true
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NPM_VERSION = "8.19.2"
 
 # [[headers]]
 # for = "/*" # This defines which paths this specific [[headers]] block will cover.
