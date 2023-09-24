@@ -8,6 +8,8 @@
 yarn.lock
 package-lock.json
 
+**/nextImageExportOptimizer
+/public/next-image-export-optimizer-hashes.json
 # testing
 /coverage
 

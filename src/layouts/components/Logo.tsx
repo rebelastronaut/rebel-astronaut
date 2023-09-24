@@ -2,7 +2,7 @@
 
 import config from "@/config/config.json";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -37,7 +37,7 @@ const Logo = ({ src }: { src?: string }) => {
   return (
     <Link href="/" className="navbar-brand inline-block">
       {logoPath ? (
-        <Image
+        <ExportedImage
           width={logo_width.replace("px", "") * 2}
           height={logo_height.replace("px", "") * 2}
           src={logoPath}

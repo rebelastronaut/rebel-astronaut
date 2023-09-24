@@ -1,9 +1,7 @@
 ---
-title: "Rebel Astronaut Lands!"
-meta_title: "Our Mission"
-description: "Our Mission"
-image: "/images/avatar.png"
-layout: "about"
+title: "Privacy Policy"
+meta_title: ""
+description: "this is meta description"
 draft: false
 ---
 
@@ -12,10 +10,6 @@ draft: false
   
 
 **Last updated September 04, 2023**
-
-  
-
-  
 
   
 
