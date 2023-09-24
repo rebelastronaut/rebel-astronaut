@@ -4,13 +4,13 @@
       "name": "github",
       "icon": "FaGithub",
       "family": "fa",
-      "link": "https://www.github.com/"
+      "link": "https://www.github.com/rebelastronaut"
     },
     {
       "name": "linkedin",
       "icon": "FaLinkedin",
       "family": "fa",
-      "link": "https://www.linkedin.com/"
+      "link": "https://www.linkedin.com/company/rebelastronaut"
     }
   ]
 }

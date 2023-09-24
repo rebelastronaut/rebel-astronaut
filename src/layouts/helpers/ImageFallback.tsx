@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useState } from "react";
 
 const ImageFallback = (props: any) => {
@@ -13,7 +13,7 @@ const ImageFallback = (props: any) => {
   }, [src]);
 
   return (
-    <Image
+    <ExportedImage
       {...rest}
       src={imgSrc}
       onError={() => {
