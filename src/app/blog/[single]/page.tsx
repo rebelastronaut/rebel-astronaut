@@ -76,10 +76,10 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
               />
               <ul className="mb-4">
                 <li className="mr-4 inline-block">
-                  <a href={`/authors/${slugify(author)}`}>
+                  <Link href={`/authors/${slugify(author)}`}>
                     <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
                     {humanize(author)}
-                  </a>
+                  </Link>
                 </li>
                 <li className="mr-4 inline-block">
                   <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
@@ -137,7 +137,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             <h2 className="h3 mb-12 text-center">Related Posts</h2>
             <div className="row justify-center">
               {similarPosts.map((post) => (
-                <div key={post.slug} className="lg:col-4">
+                <div key={post.slug} className="lg:col-4 mb-7">
                   <BlogCard data={post} />
                 </div>
               ))}
