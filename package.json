@@ -42,7 +42,7 @@
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "require-context": "^1.1.0",
-    "sharp": "^0.32.1",
+    "sharp": "0.32",
     "superjson": "^1.12.4",
     "swiper": "^9.4.1"
   },
